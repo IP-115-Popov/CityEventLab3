@@ -27,5 +27,17 @@
 		</DataTemplate>
 	</Window.DataTemplates>
 	<!--<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>-->
-	
+	<Grid ShowGridLines="True" RowDefinitions="0.1*,*">
+		<Grid Grid.Row="0" ColumnDefinitions="*,*,*,*,*,*,*,*,*">
+			<Image Grid.Column="0" Width="30" Height="30" Source="/Assets/pics/forChildren.png"/>
+			<Image Grid.Column="1" Width="30" Height="30" Source="/Assets/pics/sport.png"/>
+			<Image Grid.Column="2" Width="30" Height="30" Source="/Assets/pics/culture.png"/>
+			<Image Grid.Column="3" Width="30" Height="30" Source="/Assets/pics/excursions.png"/>
+			<Image Grid.Column="4" Width="30" Height="30" Source="/Assets/pics/lifestyle.png"/>
+			<Image Grid.Column="5" Width="30" Height="30" Source="/Assets/pics/parties.png"/>
+			<Image Grid.Column="6" Width="30" Height="30" Source="/Assets/pics/education.png"/>
+			<Image Grid.Column="7" Width="30" Height="30" Source="/Assets/pics/online.png"/>
+			<Image Grid.Column="8" Width="30" Height="30" Source="/Assets/pics/show.png"/>
+		</Grid>
+	</Grid>
 </Window>
