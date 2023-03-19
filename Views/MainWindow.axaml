@@ -3,6 +3,7 @@
         xmlns:vm="using:CityEventLab3.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:localM="clr-namespace:CityEventLab3.Models"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="CityEventLab3.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -11,9 +12,21 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-	<Window.Styles>
-		<StyleInclude Source="/Assets/MyCastomStyle.axaml"/>
-	</Window.Styles>
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<Window.Resources>
+		<vm:BitmapAssetValueConverter x:Key="variableImage"/>
+	</Window.Resources>
+	<Window.DataTemplates>
+		<DataTemplate>
+			<Grid RowDefinitions="*,*,*,*,*" Height="40" Width="40">
+				<Image Grid.Row="0" Height="40" Width="40" Source="/Assets/IventImage/sport.png"/>
+				<TextBlock Grid.Row="1" Text="{Binding Header}"/>
+				<TextBlock Grid.Row="2" Text="{Binding Description}"/>
+				<TextBlock Grid.Row="3" Text="{Binding Date}"/>
+				<TextBlock Grid.Row="4" Text="{Binding Price}"/>
+			</Grid>
+		</DataTemplate>
+	</Window.DataTemplates>
+
+	<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>
 
 </Window>
