@@ -16,7 +16,7 @@
 		<vm:BitmapAssetValueConverter x:Key="variableImage"/>
 	</Window.Resources>
 	<Window.DataTemplates>
-		<DataTemplate>
+		<DataTemplate DataType="{x:Type localM:MyEvent}">
 			<Grid RowDefinitions="*,*,*,*,*" Height="150" Width="100">
 				<Image Grid.Row="0" Height="40" Width="40" Source="/Assets/IventImage/sport.png" />
 				<TextBlock Grid.Row="1" Text="{Binding Header}"/>
@@ -26,7 +26,7 @@
 			</Grid>
 		</DataTemplate>
 	</Window.DataTemplates>
-	<!--<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>-->
+	
 	<Grid ShowGridLines="True" RowDefinitions="0.1*,*">
 		<Grid Grid.Row="0" ColumnDefinitions="*,*,*,*,*,*,*,*,*">
 			<Image Grid.Column="0" Width="30" Height="30" Source="/Assets/pics/forChildren.png"/>
@@ -38,6 +38,11 @@
 			<Image Grid.Column="6" Width="30" Height="30" Source="/Assets/pics/education.png"/>
 			<Image Grid.Column="7" Width="30" Height="30" Source="/Assets/pics/online.png"/>
 			<Image Grid.Column="8" Width="30" Height="30" Source="/Assets/pics/show.png"/>
+		</Grid>
+		<Grid Grid.Row="1">
+			<ListBoxItem>
+				<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>
+			</ListBoxItem>
 		</Grid>
 	</Grid>
 </Window>
