@@ -17,8 +17,8 @@
 	</Window.Resources>
 	<Window.DataTemplates>
 		<DataTemplate>
-			<Grid RowDefinitions="*,*,*,*,*" Height="40" Width="40">
-				<Image Grid.Row="0" Height="40" Width="40" Source="/Assets/IventImage/sport.png"/>
+			<Grid RowDefinitions="*,*,*,*,*" Height="150" Width="100">
+				<Image Grid.Row="0" Height="40" Width="40" Source="/Assets/IventImage/sport.png" />
 				<TextBlock Grid.Row="1" Text="{Binding Header}"/>
 				<TextBlock Grid.Row="2" Text="{Binding Description}"/>
 				<TextBlock Grid.Row="3" Text="{Binding Date}"/>
@@ -26,7 +26,6 @@
 			</Grid>
 		</DataTemplate>
 	</Window.DataTemplates>
-
-	<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>
-
+	<!--<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>-->
+	
 </Window>
