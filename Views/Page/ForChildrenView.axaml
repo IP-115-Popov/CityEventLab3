@@ -3,6 +3,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:localM="clr-namespace:CityEventLab3.Models"
+			 xmlns:vm="using:CityEventLab3.ViewModels"
              x:Class="CityEventLab3.Views.Page.ForChildrenView">
-  Welcome to Avalonia7!
+	<UserControl.Resources>
+		<vm:BitmapAssetValueConverter x:Key="variableImage"/>
+	</UserControl.Resources>
+	<UserControl.DataTemplates>
+		<DataTemplate DataType="{x:Type localM:MyEvent}">
+			<Grid RowDefinitions="*,*,*,*,*" Height="150" Width="100">
+				<Image Grid.Row="0" Height="40" Width="40" Source="{Binding ImagePath, Converter={StaticResource variableImage}}"/>
+				<TextBlock Grid.Row="1" Text="{Binding Header}"/>
+				<TextBlock Grid.Row="2" Text="{Binding Description}"/>
+				<TextBlock Grid.Row="3" Text="{Binding Date}"/>
+				<TextBlock Grid.Row="4" Text="{Binding Price}"/>
+			</Grid>
+		</DataTemplate>
+	</UserControl.DataTemplates>
+
+	<ListBoxItem>
+		<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>
+	</ListBoxItem>
 </UserControl>
