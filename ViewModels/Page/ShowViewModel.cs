@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CityEventLab3.Views.Page
+namespace CityEventLab3.ViewModels.Page
 {
-    internal class PartiesView
+    internal class ShowViewModel : ViewModelBase
     {
     }
 }

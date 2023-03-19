@@ -18,31 +18,65 @@
 	<Window.DataTemplates>
 		<DataTemplate DataType="{x:Type localM:MyEvent}">
 			<Grid RowDefinitions="*,*,*,*,*" Height="150" Width="100">
-				<Image Grid.Row="0" Height="40" Width="40" Source="/Assets/IventImage/sport.png" />
+				<Image Grid.Row="0" Height="40" Width="40" Source="{Binding ImagePath, Converter={StaticResource variableImage}}" />
 				<TextBlock Grid.Row="1" Text="{Binding Header}"/>
 				<TextBlock Grid.Row="2" Text="{Binding Description}"/>
 				<TextBlock Grid.Row="3" Text="{Binding Date}"/>
 				<TextBlock Grid.Row="4" Text="{Binding Price}"/>
 			</Grid>
 		</DataTemplate>
+		<DataTemplate DataType="{x:Type localM:MenuItem}">
+			<Grid ColumnDefinitions="*,*">
+				<Image Grid.Column="0" Height="40" Width="40" Source="{Binding ImagePath, Converter={StaticResource variableImage}}" />
+				<Button Grid.Column="1" Content="{Binding ButtonText}"/>
+			</Grid>
+		</DataTemplate>
 	</Window.DataTemplates>
 	
 	<Grid ShowGridLines="True" RowDefinitions="0.1*,*">
 		<Grid Grid.Row="0" ColumnDefinitions="*,*,*,*,*,*,*,*,*">
-			<Image Grid.Column="0" Width="30" Height="30" Source="/Assets/pics/forChildren.png"/>
-			<Image Grid.Column="1" Width="30" Height="30" Source="/Assets/pics/sport.png"/>
-			<Image Grid.Column="2" Width="30" Height="30" Source="/Assets/pics/culture.png"/>
-			<Image Grid.Column="3" Width="30" Height="30" Source="/Assets/pics/excursions.png"/>
-			<Image Grid.Column="4" Width="30" Height="30" Source="/Assets/pics/lifestyle.png"/>
-			<Image Grid.Column="5" Width="30" Height="30" Source="/Assets/pics/parties.png"/>
-			<Image Grid.Column="6" Width="30" Height="30" Source="/Assets/pics/education.png"/>
-			<Image Grid.Column="7" Width="30" Height="30" Source="/Assets/pics/online.png"/>
-			<Image Grid.Column="8" Width="30" Height="30" Source="/Assets/pics/show.png"/>
+			<!--<ListBoxItem Grid.Column="0">
+				<localM:MenuItem ImagePath="Assets\pics\forChildren.png" ButtonText="Hello"/>
+			</ListBoxItem>
+			<ListBoxItem Grid.Column="1">
+				<localM:MenuItem ImagePath="Assets\pics\sport.png" ButtonText="Hello"/>
+			</ListBoxItem>
+			<ListBoxItem Grid.Column="2">
+				<localM:MenuItem ImagePath="Assets\pics\culture.png" ButtonText="Hello"/>
+			</ListBoxItem>
+			<ListBoxItem Grid.Column="3">
+				<localM:MenuItem ImagePath="Assets\pics\excursions.png" ButtonText="Hello"/>
+			</ListBoxItem>
+			<ListBoxItem Grid.Column="4">
+				<localM:MenuItem ImagePath="Assets\pics\lifestyle.png" ButtonText="Hello"/>
+			</ListBoxItem>
+			<ListBoxItem Grid.Column="5">
+				<localM:MenuItem ImagePath="Assets\pics\parties.png" ButtonText="Hello"/>
+			</ListBoxItem>
+			<ListBoxItem Grid.Column="6">
+				<localM:MenuItem ImagePath="Assets\pics\education.png" ButtonText="Hello"/>
+			</ListBoxItem>
+			<ListBoxItem Grid.Column="7">
+				<localM:MenuItem ImagePath="Assets\pics\online.png" ButtonText="Hello"/>
+			</ListBoxItem>
+			<ListBoxItem Grid.Column="8">
+				<localM:MenuItem ImagePath="Assets\pics\show.png" ButtonText="Hello"/>
+			</ListBoxItem>-->
+			<Button Grid.Column="0" Command="" Content="Click mi"/>
+			<Button Grid.Column="1" Command="" Content="Click mi"/>
+			<Button Grid.Column="2" Command="" Content="Click mi"/>
+			<Button Grid.Column="3" Command="" Content="Click mi"/>
+			<Button Grid.Column="4" Command="" Content="Click mi"/>
+			<Button Grid.Column="5" Command="" Content="Click mi"/>
+			<Button Grid.Column="6" Command="" Content="Click mi"/>
+			<Button Grid.Column="7" Command="" Content="Click mi"/>
+			<Button Grid.Column="8" Command="" Content="Click mi"/>
 		</Grid>
 		<Grid Grid.Row="1">
-			<ListBoxItem>
+			<!--<ListBoxItem>
 				<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>
-			</ListBoxItem>
+			</ListBoxItem>-->
+			
 		</Grid>
 	</Grid>
 </Window>
