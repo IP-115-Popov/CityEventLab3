@@ -62,21 +62,22 @@
 			<ListBoxItem Grid.Column="8">
 				<localM:MenuItem ImagePath="Assets\pics\show.png" ButtonText="Hello"/>
 			</ListBoxItem>-->
-			<Button Grid.Column="0" Command="" Content="Click mi"/>
-			<Button Grid.Column="1" Command="" Content="Click mi"/>
-			<Button Grid.Column="2" Command="" Content="Click mi"/>
-			<Button Grid.Column="3" Command="" Content="Click mi"/>
-			<Button Grid.Column="4" Command="" Content="Click mi"/>
-			<Button Grid.Column="5" Command="" Content="Click mi"/>
-			<Button Grid.Column="6" Command="" Content="Click mi"/>
-			<Button Grid.Column="7" Command="" Content="Click mi"/>
-			<Button Grid.Column="8" Command="" Content="Click mi"/>
+			<Button Grid.Column="0" Command="{Binding ReplaseTo}" CommandParameter="ForChildren" Content="Click mi"/>
+			<Button Grid.Column="1" Command="{Binding ReplaseTo}" CommandParameter="Culture" Content="Click mi"/>
+			<Button Grid.Column="2" Command="{Binding ReplaseTo}" CommandParameter="Sport" Content="Click mi"/>
+			<Button Grid.Column="3" Command="{Binding ReplaseTo}" CommandParameter="Excursions" Content="Click mi"/>
+			<Button Grid.Column="4" Command="{Binding ReplaseTo}" CommandParameter="Lifestyle" Content="Click mi"/>
+			<Button Grid.Column="5" Command="{Binding ReplaseTo}" CommandParameter="Parties" Content="Click mi"/>
+			<Button Grid.Column="6" Command="{Binding ReplaseTo}" CommandParameter="Education" Content="Click mi"/>
+			<Button Grid.Column="7" Command="{Binding ReplaseTo}" CommandParameter="Online" Content="Click mi"/>
+			<Button Grid.Column="8" Command="{Binding ReplaseTo}" CommandParameter="Show" Content="Click mi"/>
 		</Grid>
-		<Grid Grid.Row="1">
-			<!--<ListBoxItem>
+		<!--<Grid Grid.Row="1">
+			<ListBoxItem>
 				<localM:MyEvent ImagePath="Assets\IventImage\sport.png" Header="Razcolbas" Description="Aboba lol" Date="10.10.10" Price="1000 ru."/>
-			</ListBoxItem>-->
+			</ListBoxItem>
 			
-		</Grid>
+		</Grid>-->
+		<ContentControl Grid.Row="1" Content="{Binding Content}"/>
 	</Grid>
 </Window>
